@@ -1,0 +1,9 @@
+*
+!/.config
+!/.config/mr
+!/.config/mr/available.d
+!/.config/mr/available.d/terminator.vcsh
+!/.config/mr/config.d
+!/.config/mr/config.d/terminator.vcsh
+!/.gitignore.d
+!/.gitignore.d/terminator
