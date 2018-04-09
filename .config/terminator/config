@@ -1,0 +1,23 @@
+[global_config]
+  focus = mouse
+  suppress_multiple_term_dialog = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[window0]]]
+      parent = ""
+      type = Window
+    [[[terminal1]]]
+      parent = window0
+      type = Terminal
+[plugins]
+[profiles]
+  [[default]]
+    audible_bell = True
+    background_darkness = 0.8
+    background_image = None
+    font = Liberation Mono for Powerline 10
+    scrollback_infinite = True
+    scrollback_lines = 1000
+    use_system_font = False
+    visible_bell = True

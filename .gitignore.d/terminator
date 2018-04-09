@@ -7,3 +7,7 @@
 !/.config/mr/config.d/terminator.vcsh
 !/.gitignore.d
 !/.gitignore.d/terminator
+
+!/.config
+!/.config/terminator
+!/.config/terminator/config
