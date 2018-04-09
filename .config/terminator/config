@@ -10,6 +10,35 @@
     [[[terminal1]]]
       parent = window0
       type = Terminal
+  [[sysadmin]]
+    [[[window0]]]
+      parent = ""
+      type = Window
+    [[[split1]]]
+      parent = window0
+      ratio = 0.7
+      type = VPaned
+    [[[terminal2]]]
+      command = htop
+      order = 0
+      parent = split1
+      title = htop
+      type = Terminal
+    [[[split3]]]
+      order = 1
+      parent = split1
+      ratio = 0.5
+      type = HPaned
+    [[[terminal4]]]
+      command = watch sensors
+      order = 0
+      parent = split3
+      title = sensors
+      type = Terminal
+    [[[terminal5]]]
+      order = 1
+      parent = split3
+      type = Terminal
 [plugins]
 [profiles]
   [[default]]
