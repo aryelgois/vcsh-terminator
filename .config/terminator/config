@@ -10,6 +10,23 @@
     [[[terminal1]]]
       parent = window0
       type = Terminal
+  [[git-split]]
+    [[[window0]]]
+      parent = ""
+      type = Window
+    [[[split1]]]
+      parent = window0
+      ratio = 0.5475
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = split1
+      type = Terminal
+    [[[terminal3]]]
+      command = git-watch
+      order = 1
+      parent = split1
+      type = Terminal
   [[sysadmin]]
     [[[window0]]]
       parent = ""
