@@ -11,3 +11,6 @@
 !/.config
 !/.config/terminator
 !/.config/terminator/config
+
+!/bin
+!/bin/,gterm
