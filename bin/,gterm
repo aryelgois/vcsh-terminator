@@ -32,4 +32,4 @@ REPOSITORY_PATH="$HOME/git/$REPOSITORY"
 
 [[ -d $REPOSITORY_PATH ]] || git init "$REPOSITORY_PATH"
 cd "$REPOSITORY_PATH"
-exec terminator -l git-split -T "$REPOSITORY"
+exec terminator -l git-split -T "$REPOSITORY" -m
