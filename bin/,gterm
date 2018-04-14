@@ -1,34 +1,32 @@
 #!/usr/bin/env bash
 # A terminator(1) launcher with a specific layout for git workflow
-#   $1 Repository name (your) or full repository name (user/repository)
+#   $1 Repository to open (and create)
 
 set -e
 
 REPOSITORY="$1"
 
 if [[ -z $REPOSITORY ]]; then
-    >&2 echo "Usage: $(basename "$0") [user/]repository"
+    cat <<EOF >&2
+Usage: $(basename "$0") [USERNAME/]REPOSITORY
+
+    REPOSITORY Repository to open (and create if it does not exist)
+    USERNAME   If not specified, REPOSITORY is located in ~/git. If specified,
+               it is in /git
+EOF
     exit 1
 fi
 
 case "$REPOSITORY" in
 */*)
+    PREFIX='/git'
     ;;
 *)
-    USERNAME="$(git config github.user || true)"
-    if [[ -z $USERNAME ]]; then
-        cat <<EOF >&2
-E: Configure your GitHub user with:
-
-    git config --global github.user USERNAME
-EOF
-        exit 1
-    fi
-    REPOSITORY="$USERNAME/$REPOSITORY"
+    PREFIX="$HOME/git"
     ;;
 esac
 
-REPOSITORY_PATH="$HOME/git/$REPOSITORY"
+REPOSITORY_PATH="$PREFIX/$REPOSITORY"
 
 [[ -d $REPOSITORY_PATH ]] || git init "$REPOSITORY_PATH"
 cd "$REPOSITORY_PATH"
