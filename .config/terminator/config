@@ -23,9 +23,10 @@
       parent = split1
       type = Terminal
     [[[terminal3]]]
-      command = git-watch
+      command = bash -ic 'git watchless'
       order = 1
       parent = split1
+      title = watchless
       type = Terminal
   [[sysadmin]]
     [[[window0]]]
