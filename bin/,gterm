@@ -18,6 +18,9 @@ EOF
 fi
 
 case "$REPOSITORY" in
+.gist/*)
+    PREFIX="$HOME/git"
+    ;;
 */*)
     PREFIX='/git'
     ;;
